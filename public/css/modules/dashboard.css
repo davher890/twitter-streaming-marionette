@@ -1,0 +1,144 @@
+.dashboard-container {
+    background-color: white;
+    padding: 2px;
+}
+
+.dashboard-container .dashboard-title-container {
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 5px;
+}
+
+.dashboard-container .dashboard-title-container .dashboard-title-text {
+    font-size: 1.8em;
+}
+
+.dashboard-icon-list-container {
+    float: left;
+    width: 35px !important;
+    height: 656px;
+    background-color: #F3F3F3;
+}
+.dashboard-icon-list-container ul {
+    border-radius: 0px !important;
+    width: 100%;
+    padding: 0px;
+}
+
+.dashboard-icon-list-container ul li {
+    padding: 6px;
+}
+
+.dashboard-icon-list-container ul li:hover {
+    background-color: #C1C1C1;
+    cursor: pointer;
+}
+
+.dashboard-icon-list-container .dashboard-selected {
+    /* color: #F44336 !important; */
+    background-color: #b6b6b6;
+}
+
+
+
+.dashboard-container .panel-footer {
+    min-height: 30px !important;
+    background-color: #F5F5F5 !important;
+    vertical-align: middle !important;
+    line-height: 30px !important;
+    padding: 0 14px !important;
+}
+
+
+.dashboard-container .dashboard-title-container ul.pagination-container {
+    float: right;
+    margin-bottom: 0px;
+}
+
+.dashboard-item-hidden {
+    opacity: 0.2;
+}
+
+
+
+
+/************
+** Messages **
+************/
+
+.footer-task .element-left {
+    float: left;
+    margin-left: 1em;
+}
+
+.footer-task .icon-tumblr {
+    background-color: #34679C;
+    color: white;
+    padding: 4px;
+    border-radius: 5px;
+}
+
+.footer-task .button-right {
+    float: right;
+    margin-left: 0.5em;
+}
+
+.footer-task .button-right>span {
+    color: white;
+    background: #797979;
+    padding: 4px;
+    border-radius: 100%;
+    font-size: 0.8em;
+    cursor: pointer;
+}
+
+.footer-task .button-right>span:hover {
+    background: #496c88;
+}
+
+.footer-task .button-right>span.item-validated {
+    background-color: rgb(87, 177, 5);
+}
+
+.footer-task .button-right>span.item-deleted {
+    background-color: #DA3B2B;
+}
+
+.message-content {
+    word-break: break-word;
+}
+
+.message-box {
+    padding: 0px 5px;
+}
+
+.message-container:hover {
+    box-shadow: 0px 0px 8px 1px #519bb9;
+    cursor: pointer;
+}
+
+/** -- tumblr -- **/
+.tumblr-title {
+    width: 100%;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #34679C;
+    padding-left: 10px;
+    height: 25px;
+}
+
+.tumblr-image {
+    float: left;
+    margin: 0px 0.5em 0.2em 0em;
+    max-height: 100px;
+    width: 45%;
+    box-shadow: 0px 0px 2px 1px #8c8c8c;
+    margin-left: 3px;
+    margin-top: 3px;
+}
+.tumblr-body {
+    overflow-y: hidden;
+    height: 128px;
+    font-size: 0.9em;
+    color: #404040;
+}
