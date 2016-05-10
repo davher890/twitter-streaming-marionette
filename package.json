@@ -1,0 +1,19 @@
+{
+  "name": "front-undecover-operations",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "amqp": "~0.2.4",
+    "body-parser": "~1.15.0",
+    "browser-sync": "^2.11.2",
+    "express": "~4.13.4",
+    "fs": "0.0.2",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.2.0",
+    "method-override": "~2.3.5",
+    "minimist": "~1.2.0",
+    "request": "^2.70.0",
+    "twitter": "^1.2.5",
+    "ws": "~1.0.1"
+  }
+}

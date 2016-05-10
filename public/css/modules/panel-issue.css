@@ -1,0 +1,82 @@
+.panel-issues .issue-list {
+/*  overflow-y: auto !important; */
+}
+
+.panel-issue {
+  box-shadow: 1px 1px 1px #B9B9B9;
+}
+
+.panel-issue .issue-name {
+  color: #0F90D0 !important;
+  text-decoration: none !important;
+  font-size: 1.2em !important;
+}
+
+.panel-issue .issue-name:hover {
+/* color: #4FB3E4 !important; */
+  text-decoration: underline !important;
+  font-size: 1.2em !important;
+  font-weight: bold !important;
+}
+
+.panel-issue .issue-play-button {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  cursor: pointer;
+  z-index: 2;
+}
+
+
+.panel-issue .clickable-button:hover {
+    color: #239A1C !important;
+    cursor: pointer !important;
+}
+
+.panel-issue .issue-edit-button>span {
+  color: #444444;
+  font-size: 1em;
+}
+
+
+.panel-issue .issue-description {
+  color: #6D6D6D;
+}
+
+.panel-issue .user-avatar {
+  float: left;
+}
+
+.panel-issue .panel-footer {
+  min-height: 40px !important;
+  background-color: #F5F5F5 !important;
+  vertical-align: middle !important;
+  line-height: 40px !important;
+  padding: 0 14px !important;
+}
+
+.panel-issue .panel-footer>* {
+  margin-right: 5px;
+}
+
+.panel-issue .panel-footer .issue-result-number {
+  background-color: #E22323;
+  padding: 4px;
+  color: white;
+  font-size: 0.8em;
+  text-shadow: 1px 1px 1px #710606;
+  border-radius: 5px;
+  /* box-shadow: 1px 1px 1px #7B1616; */
+}
+
+.panel-issue .full-opacity {
+    opacity: 1 !important;
+}
+
+.issue-hidden .panel-issue {
+    border-left-color: rgba(0,0,0,0.2) !important;
+}
+
+.issue-hidden .panel-issue .panel-body,.issue-hidden .panel-issue .panel-footer>* {
+    opacity: 0.2;
+}

@@ -1,0 +1,71 @@
+.region-footer {
+    text-align: center;
+    border-top: 1px solid #C5C5C5;
+}
+
+.region-footer .footer-phase {
+    display: inline-block;
+    width: 130px;
+    cursor: pointer;
+}
+
+
+
+.region-footer .footer-phase .footer-phase-name {
+    height: 20px;
+    float: left;
+    width: 100%;
+    line-height: 23px;
+    font-size: 0.8em;
+    color: #696969;
+}
+
+.region-footer .footer-phase:hover .footer-phase-name {
+    color: #159A0C;
+}
+
+.region-footer .footer-phase:hover .footer-phase-icon>span {
+    color: #159A0C !important;
+    border: 2px solid #159A0C !important;
+    background-color: white !important;
+}
+
+.region-footer .footer-phase .footer-phase-icon {
+    height: 25px;
+    float: left;
+    width: 100%;
+    line-height: 25px;
+}
+
+.region-footer .footer-phase .footer-phase-icon {
+    height: 37px;
+    float: left;
+    width: 100%;
+    line-height: 37px;
+}
+
+.region-footer .footer-phase .footer-phase-icon>span {
+    vertical-align: top;
+}
+
+.region-footer .footer-phase .footer-phase-icon>span.phase-complete {
+    color: white;
+    background: #277ECA;
+    padding: 6px;
+    border-radius: 100%;
+}
+
+.region-footer .footer-phase .footer-phase-icon>span.phase-incoming {
+    color: #277ECA;
+    background: white;
+    padding: 6px;
+    border-radius: 100%;
+    border: 2px solid #277ECA
+}
+.region-footer .footer-phase-separator {
+    display: inline-block;
+    width: 150px;
+    height: 0px;
+    border: 1px solid #277ECA;
+    margin: 20px -30px;
+}

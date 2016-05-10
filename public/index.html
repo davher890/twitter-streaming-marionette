@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+    <link href="css/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/core.css" rel="stylesheet" type="text/css">
+    <link href="css/components.css" rel="stylesheet" type="text/css">
+    <link href="css/colors.css" rel="stylesheet" type="text/css">
+    <link href="css/jquery.json-view.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link rel="stylesheet" href="css/modules/panel-issue.css" type="text/css">
+    <link rel="stylesheet" href="css/modules/modal.css" type="text/css">
+    <link rel="stylesheet" href="css/modules/temporal-issue.css" type="text/css">
+    <link rel="stylesheet" href="css/modules/dashboard.css" type="text/css">
+    <link rel="stylesheet" href="css/modules/footer.css" type="text/css">
+
+
+
+    <style>
+        .axis text {
+            font: 11px sans-serif;
+        }
+
+        .axis path {
+            display: none;
+        }
+
+        .axis line {
+            fill: none;
+            stroke: #000;
+            shape-rendering: crispEdges;
+        }
+
+        .grid-background {
+            fill: #ddd;
+        }
+
+        .grid line,
+        .grid path {
+            fill: none;
+            stroke: #fff;
+            shape-rendering: crispEdges;
+        }
+
+        .grid .minor.tick line {
+            stroke-opacity: .5;
+        }
+
+        .brush .extent {
+            stroke: #000;
+            fill-opacity: .125;
+            shape-rendering: crispEdges;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- BEGIN REGION CONTENT REGION MAIN -->
+    <div class="region-content">
+        <div class="container-fluid linea-page">
+
+            <!-- BEGIN INFO+LIST LIST -->
+            <div class="row">
+
+                <!-- BEGIN SIDE CENTRAL BAR -->
+                <div class="col-md-8 col-lg-8 no-padding-right">
+                    <div class="panel panel-default panel-query">
+                        <div class="panel-heading">
+                            <div id="center-container">
+                              Campos search
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- END SIDE CENTRAL BAR -->
+            </div>
+        </div>
+    </div>
+    <!-- END REGION MAIN -->
+
+    <!-- BEGIN REGION FOOTER -->
+    <div class="region-footer" id="footer-container">
+
+    </div>
+    <!-- END REGION FOOTER -->
+
+    <!-- BEGIN CORE PLUGINS -->
+    <!--script src="../assets/global/plugins/jquery.min.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script-->
+    <!-- END CORE PLUGINS -->
+
+    <!-- BEGIN TEMPLATE SCRIPT PAGE -->
+    <!--script src="lib/leaflet/leaflet.js"></script-->
+
+    <!--¡IMPORTANT! For this modal elements the .modal class of the bootstrap.css files has been modified-->
+    <div style="display: none" id="modal-container" class="modal"></div>
+
+    <script src="js/config.js"></script>
+    <script data-main="js/main" src="lib/require/require.js"></script>
+
+</body>
+
+</html>
