@@ -24,6 +24,8 @@ app.use('/', express.static(__dirname + '/public'));
 app.use(methodOverride());
 app.set('view engine', 'html');
 
+app.use(favicon(path.join(__dirname,'public','images','favicon.ico')));
+
 var wss = new WebSocketServer({
     port: 8080
 });
@@ -65,7 +67,7 @@ wss.on('connection', function connection(ws) {
 
 // Get environment
 var env = process.env.NODE_ENV | 'development';
-var port = process.env.PORT | 3000;
+var port = process.env.PORT;// | 3000;
 
 app.listen(port, function() {
     console.log('Express server listening on port ', this.address().port);
