@@ -3,7 +3,9 @@
 var express = require('express'),
     bodyParser = require('body-parser'),
     methodOverride = require('method-override'),
-    WebSocketServer = require('ws').Server;
+    WebSocketServer = require('ws').Server,
+    favicon = require('favicon'),
+    path = require('path');
 
 var Twitter = require('twitter');
 
@@ -24,7 +26,7 @@ app.use('/', express.static(__dirname + '/public'));
 app.use(methodOverride());
 app.set('view engine', 'html');
 
-app.use(favicon(path.join(__dirname,'public','images','favicon.ico')));
+// app.use(favicon(path.join(__dirname,'public','images','favicon.ico')));
 
 var wss = new WebSocketServer({
     port: 8080
