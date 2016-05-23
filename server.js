@@ -66,7 +66,7 @@ wss.on('connection', function connection(ws) {
 
 // Get environment
 var env = process.env.NODE_ENV | 'development';
-var port = process.env.PORT | 3000;
+var port = process.env.PORT;// | 3000;
 
 app.listen(port, function() {
     console.log('Express server listening on port ', this.address().port);
