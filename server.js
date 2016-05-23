@@ -1,10 +1,8 @@
 'use strict'
 
 var express = require('express'),
-    amqp = require('amqp'),
     bodyParser = require('body-parser'),
     methodOverride = require('method-override'),
-    fs = require('fs'),
     WebSocketServer = require('ws').Server;
 
 var Twitter = require('twitter');
@@ -32,31 +30,32 @@ var wss = new WebSocketServer({
 // Wait for connection to become established.
 wss.on('connection', function connection(ws) {
 
-    /**
-     * Stream statuses filtered by keyword
-     * number of tweets per second depends on topic popularity
-     **/
-    client.stream('statuses/filter', {
-        track: 'node'
-    }, function(stream) {
-        stream.on('data', function(tweet) {
-          ws.send(JSON.stringify(tweet), function ack(error) {
-              // if error is not defined, the send has been completed,
-              // otherwise the error object will indicate what failed.
-              if (error != undefined) {
-                  console.log('Error sending message', error);
-              }
-          });
-        });
-
-        stream.on('error', function(error) {
-            console.log(error);
-        });
-    });
-
     ws.on('message', function incoming(incMessage, flags) {
-        var data = JSON.parse(incMessage);
-        console.log('Change twitter terms');
+        var data = JSON.parse(incMessage).hashtag;
+        console.log('Change twitter hastag', data);
+
+        /**
+         * Stream statuses filtered by keyword
+         * number of tweets per second depends on topic popularity
+         **/
+        client.stream('statuses/filter', {
+            track: data
+        }, function(stream) {
+            stream.on('data', function(tweet) {
+              console.log(tweet);
+              ws.send(JSON.stringify(tweet), function ack(error) {
+                  // if error is not defined, the send has been completed,
+                  // otherwise the error object will indicate what failed.
+                  if (error != undefined) {
+                      console.log('Error sending message', error);
+                  }
+              });
+            });
+
+            stream.on('error', function(error) {
+                console.log(error);
+            });
+        });
 
     });
     ws.on('close', function close() {
