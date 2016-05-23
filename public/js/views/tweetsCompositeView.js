@@ -12,17 +12,25 @@ define([
         childView: TweetItemView,
         childViewContainer: '#tweet-list',
 
+        events : {
+          'click .btn-default' : 'spyHastag'
+        },
+
         // Get a reference to the channel named 'tweetChannel'
         radioChannel : Radio.channel('tweetChannel'),
 
         initialize: function() {
           var self = this;
-            this.radioChannel.reply('newTweet', function(tweet) {
-                console.log(tweet);
+            this.radioChannel.reply('newTweet', function(message) {
+                var tweet = JSON.parse(message);
                 var tweetModel = new TweetModel()
                 tweetModel.attributes = tweet;
                 self.collection.add(tweetModel);
             });
+        },
+        spyHastag : function(){
+          var hashtag = $('input#hashtag').val();
+          this.radioChannel.request('hashtag', JSON.stringify({ type : 'hashtag', hashtag : hashtag}));
         }
     });
 });

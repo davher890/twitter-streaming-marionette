@@ -9,11 +9,9 @@ connection.onerror = function (error) {
 
 // Log messages from the server
 connection.onmessage = function (e) {
-  var data = JSON.parse(e.data);
-  self.postMessage(JSON.stringify(data));
+  self.postMessage(e.data);
 };
 
 this.addEventListener('message', function(e) {
-  var data = JSON.parse(e.data);
-  connection.send(JSON.stringify(data));
+  connection.send(e.data);
 }, false);

@@ -13,9 +13,12 @@ function(core, Radio) {
   var worker = new Worker("/js/worker/webWorker.js");
 
   worker.addEventListener('message', function (workerEvent) {
-    var tweet = JSON.parse(workerEvent.data);
-    radioChannel.request('newTweet', tweet);
+    radioChannel.request('newTweet', workerEvent.data);
   }, false);
+
+  radioChannel.reply('hashtag', function(message){
+    worker.postMessage(message);
+  })
 
   return App;
 });
