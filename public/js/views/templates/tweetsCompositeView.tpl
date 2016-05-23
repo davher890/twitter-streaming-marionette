@@ -1,10 +1,10 @@
 <div>
-    <div class="row">
-        <label class="col-xs-4" for="hastag">Hastag:</label>
-        <div class="col-xs-4">
+    <div class="form-group form-inline">
+        <label for="hastag">Hastag:</label>
+        <div>
             <input class="form-control" id="hashtag" placeholder="hashtag">
         </div>
-        <div class="col-xs-4">
+        <div >
             <button class="btn btn-default">Spy</button>
         </div>
     </div>
