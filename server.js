@@ -14,7 +14,6 @@ var client = new Twitter({
     access_token_secret: 'zHOyIrgy1UZWMZb4Ew2fwUO8QDQtza6v6iXOJpHBMfdIB'
 });
 
-
 var app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
@@ -23,8 +22,6 @@ app.use(bodyParser.urlencoded({
 app.use('/', express.static(__dirname + '/public'));
 app.use(methodOverride());
 app.set('view engine', 'html');
-
-app.use(favicon(path.join(__dirname,'public','images','favicon.ico')));
 
 var wss = new WebSocketServer({
     port: 8080
