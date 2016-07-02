@@ -37,12 +37,17 @@ app.set('view engine', 'html');
 var wss = new WebSocketServer({
     server: server
 });
+
+var myStream;
 // Wait for connection to become established.
 wss.on('connection', function connection(ws) {
-
     ws.on('message', function incoming(incMessage, flags) {
         var data = JSON.parse(incMessage).hashtag;
         console.log('Change twitter hastag', data);
+
+        if (myStream){
+          myStream.destroy();
+        }
 
         /**
          * Stream statuses filtered by keyword
@@ -51,6 +56,7 @@ wss.on('connection', function connection(ws) {
         client.stream('statuses/filter', {
             track: data
         }, function(stream) {
+            myStream = stream;
             stream.on('data', function(tweet) {
               //console.log(tweet);
               ws.send(JSON.stringify(tweet), function ack(error) {
@@ -63,7 +69,7 @@ wss.on('connection', function connection(ws) {
             });
 
             stream.on('error', function(error) {
-                console.log(error);
+                console.log('Twitter streaming error', error);
             });
         });
 

@@ -1,10 +1,7 @@
 <div>
-    <div class="form-group form-inline">
-        <label for="hastag">Hastag:</label>
-        <div>
-            <input class="form-control" id="hashtag" placeholder="hashtag">
-        </div>
-        <div >
+    <div class="control-group">
+        <div class="controls form-inline">
+            <input type="text" class="form-control" placeholder="Hashtag" id="hashtag">
             <button class="btn btn-default">Spy</button>
         </div>
     </div>

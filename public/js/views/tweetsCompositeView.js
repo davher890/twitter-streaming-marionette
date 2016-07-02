@@ -13,7 +13,7 @@ define([
         childViewContainer: '#tweet-list',
 
         events : {
-          'click .btn-default' : 'spyHastag'
+          'click .btn-default' : 'spyHashtag'
         },
 
         // Get a reference to the channel named 'tweetChannel'
@@ -28,7 +28,7 @@ define([
                 self.collection.add(tweetModel);
             });
         },
-        spyHastag : function(){
+        spyHashtag : function(){
           var hashtag = $('input#hashtag').val();
           this.radioChannel.request('hashtag', JSON.stringify({ type : 'hashtag', hashtag : hashtag}));
         }
